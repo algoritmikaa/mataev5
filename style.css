@@ -1,0 +1,273 @@
+/* style.css — общие стили для сайта ELITECH */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafc;
+    color: #1e2b3c;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Шапка */
+header {
+    background: #0b2a3b;
+    color: #fff;
+    padding: 18px 0;
+    border-bottom: 4px solid #f7b731;
+}
+
+.header-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f7b731;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.2s;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f7b731;
+    border-bottom-color: #f7b731;
+}
+
+/* Основной контент */
+main {
+    flex: 1;
+    padding: 40px 0;
+}
+
+/* Герой */
+.hero {
+    background: linear-gradient(135deg, #1a6e8a, #0b4b62);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    border-radius: 0 0 40px 40px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Секции */
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 30px;
+    color: #0b2a3b;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #f7b731;
+    margin-top: 6px;
+}
+
+/* Блок "О бренде" */
+.brand-info {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.brand-text {
+    flex: 1;
+}
+
+.brand-text ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.brand-text li {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.brand-image {
+    flex: 1;
+    min-width: 250px;
+}
+
+.brand-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Сетка преимуществ / товаров */
+.features-grid,
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.feature-item,
+.product-item {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #eef2f7;
+}
+
+.feature-item:hover,
+.product-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.feature-item h3,
+.product-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #0b2a3b;
+}
+
+.product-item .price {
+    font-weight: 700;
+    color: #1a6e8a;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-item .desc {
+    font-size: 15px;
+    color: #4a5a6a;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #f7b731;
+    color: #0b2a3b;
+    padding: 10px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+    border: none;
+    cursor: default;
+}
+
+.btn:hover {
+    background: #e0a023;
+}
+
+/* Страница "Зачем?" */
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.reason-item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 6px solid #f7b731;
+}
+
+.reason-item h3 {
+    font-size: 22px;
+    color: #0b2a3b;
+    margin-bottom: 8px;
+}
+
+.reason-item p {
+    color: #3a4a5a;
+}
+
+/* Футер */
+footer {
+    background: #0b2a3b;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .header-grid {
+        flex-direction: column;
+        gap: 12px;
+    }
+    nav a {
+        margin: 0 12px;
+        font-size: 16px;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
+    .brand-info {
+        flex-direction: column;
+    }
+    .brand-image {
+        order: -1;
+    }
+}
